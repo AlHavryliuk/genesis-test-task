@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/genesis-test-task/static/css/main.2b9efaa7.css",
-    "main.js": "/genesis-test-task/static/js/main.d86a636d.js",
+    "main.js": "/genesis-test-task/static/js/main.3f4ac0d6.js",
     "static/media/icon-spread.svg": "/genesis-test-task/static/media/icon-spread.a82105b01635453c83111dafaad02c3b.svg",
     "index.html": "/genesis-test-task/index.html",
     "main.2b9efaa7.css.map": "/genesis-test-task/static/css/main.2b9efaa7.css.map",
-    "main.d86a636d.js.map": "/genesis-test-task/static/js/main.d86a636d.js.map"
+    "main.3f4ac0d6.js.map": "/genesis-test-task/static/js/main.3f4ac0d6.js.map"
   },
   "entrypoints": [
     "static/css/main.2b9efaa7.css",
-    "static/js/main.d86a636d.js"
+    "static/js/main.3f4ac0d6.js"
   ]
 }
