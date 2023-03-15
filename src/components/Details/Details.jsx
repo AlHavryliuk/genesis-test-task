@@ -17,7 +17,6 @@ const Details = () => {
     const courseId = useParams('id');
     const dispatch = useDispatch();
     const details = useSelector(select.details)
-    const currentVideo = useSelector(select.currentVideo)
     const detailsIsLoading = useSelector(select.detailsIsLoading)
     const videoRef = useRef(null);
 

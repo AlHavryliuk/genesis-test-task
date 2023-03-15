@@ -1,6 +1,5 @@
 import { CustomNavLink } from 'components/Custom/CustomNavLink/CustomNavLink.styled';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { CourseTitle, CustomCourseCard } from './CourseesCard.styled';
 
 const CoursesCard = ({
