@@ -6,6 +6,9 @@ export const select = {
   page: state => state.page.page,
   maxpage: state => state.page.maxpage,
   courseIsLoading: state => state.courses.isLoading,
+  details: state => state.details.details,
+  detailsIsLoading: state => state.details.isLoading,
+  currentVideo: state => state.video.currentVideo,
 };
 
 export const reselect = {

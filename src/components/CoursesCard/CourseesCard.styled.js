@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CustomCourseCard = styled.li`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.cardBackgroundColor};
+  color: ${({ theme }) => theme.cardMainColor};
   position: relative;
   transition: 0.3s;
 
@@ -64,4 +65,5 @@ export const CustomCourseCard = styled.li`
 export const CourseTitle = styled.h3`
   text-align: center;
   color: ${({ theme }) => theme.cardTitleColor};
+  padding: 5px 0 25px;
 `;

@@ -8,3 +8,10 @@ export const LightButton = styled.button`
   background-color: ${({ theme }) => theme.lightModeBackground};
   cursor: pointer;
 `;
+export const LightmodeWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: ${({ theme }) => theme.lightModeColor};
+`;

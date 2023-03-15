@@ -9,5 +9,6 @@ export const LoaderBody = styled.div`
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 5;
   background-color: ${({ theme }) => theme.headerBackgroundColor};
 `;

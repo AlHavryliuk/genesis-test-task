@@ -1,5 +1,5 @@
 import React from 'react';
-import { LightButton } from './LightMode.styled';
+import { LightButton, LightmodeWrapper } from './LightMode.styled';
 import icon from '../../images/icon-spread.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleDarkMode } from 'store/themeReducer/themeSlice';
@@ -17,11 +17,15 @@ const LightMode = () => {
     };
 
     return (
-        <LightButton onClick={handleToggleLightMode}>
-            <svg width="100%" height="100%">
-                <use href={darkMode ? moonIcon : sunIcon}></use>
-            </svg>
-        </LightButton>
+        <LightmodeWrapper >
+            <LightButton onClick={handleToggleLightMode}>
+                <svg width="100%" height="100%">
+                    <use href={darkMode ? moonIcon : sunIcon}></use>
+                </svg>
+
+            </LightButton>
+            <h2>{darkMode ? `Night` : `Light`} Mode</h2>
+        </LightmodeWrapper>
     );
 };
 

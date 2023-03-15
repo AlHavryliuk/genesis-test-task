@@ -11,6 +11,7 @@ export const authSlice = createSlice({
 
       .addCase(getToken.pending, state => {
         state.isLoading = true;
+        state.error = null;
       })
       .addCase(getToken.fulfilled, (state, action) => {
         state.isLoading = false;

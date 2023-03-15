@@ -9,7 +9,11 @@ export const CustomHeader = styled.header`
 export const CustomTitle = styled.header`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
-  color: ${({ theme }) => theme.headerColor};
-`;
 
+  & h1 {
+    font-size: 35px;
+    color: ${({ theme }) => theme.headerColor};
+  }
+`;

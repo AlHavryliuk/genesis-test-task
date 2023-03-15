@@ -11,6 +11,7 @@ export const coursesSlice = createSlice({
 
       .addCase(getCourses.pending, state => {
         state.isLoading = true;
+        state.error = null;
       })
       .addCase(getCourses.fulfilled, (state, action) => {
         state.isLoading = false;
