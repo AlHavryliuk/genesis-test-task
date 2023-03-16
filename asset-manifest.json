@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/genesis-test-task/static/css/main.f00419b2.css",
-    "main.js": "/genesis-test-task/static/js/main.0b15b95e.js",
+    "main.css": "/genesis-test-task/static/css/main.d2697113.css",
+    "main.js": "/genesis-test-task/static/js/main.7b643bb3.js",
+    "static/js/930.aab32e0f.chunk.js": "/genesis-test-task/static/js/930.aab32e0f.chunk.js",
     "static/media/icon-spread.svg": "/genesis-test-task/static/media/icon-spread.a82105b01635453c83111dafaad02c3b.svg",
     "static/media/slick.svg": "/genesis-test-task/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/genesis-test-task/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/genesis-test-task/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/genesis-test-task/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/genesis-test-task/index.html",
-    "main.f00419b2.css.map": "/genesis-test-task/static/css/main.f00419b2.css.map",
-    "main.0b15b95e.js.map": "/genesis-test-task/static/js/main.0b15b95e.js.map"
+    "main.d2697113.css.map": "/genesis-test-task/static/css/main.d2697113.css.map",
+    "main.7b643bb3.js.map": "/genesis-test-task/static/js/main.7b643bb3.js.map",
+    "930.aab32e0f.chunk.js.map": "/genesis-test-task/static/js/930.aab32e0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f00419b2.css",
-    "static/js/main.0b15b95e.js"
+    "static/css/main.d2697113.css",
+    "static/js/main.7b643bb3.js"
   ]
 }
