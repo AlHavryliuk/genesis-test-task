@@ -21,18 +21,19 @@ const PictureInPicture = () => {
         const hls = new Hls();
         const firstVideo = currentVideo;
         if (!firstVideo) return
-        const copyLink = currentVideo
-        hls.loadSource(copyLink);
+        console.log(currentVideo);
+        hls.loadSource(currentVideo);
         hls.attachMedia(video);
         const result = checkVideoList()
         if (result) {
             video.currentTime = result.lastTime;
         }
+        video.play(); 
         return () => {
             pauseVideo()
             hls.destroy()
         }
-    }, []);
+    }, [pictureIsHidden]);
 
 
 

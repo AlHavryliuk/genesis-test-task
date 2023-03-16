@@ -94,7 +94,7 @@ const PopupVideo = () => {
             <PopupVideoBody >
                 <h2>{title}</h2>
                 <video width="100%" ref={videoRef} controls onClick={((e) => e.stopPropagation())}></video>
-                <button onClick={((e) => handlePictureMode(e))}>Picture in Picture mode</button>
+                <button onClick={((e) => handlePictureMode(e))}>"Picture in Picture" mode</button>
             </PopupVideoBody>
         </PopupVideoMain>
     )

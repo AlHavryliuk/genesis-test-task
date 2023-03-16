@@ -17,7 +17,7 @@ export const PopupVideoMain = styled.div`
 
   & button {
     padding: 10px 20px;
-    background-color: transparent;
+    background-color: ${({ theme }) => theme.headerBackgroundColor};
     color: ${({ theme }) => theme.popupVideoColor};
   }
 `;
