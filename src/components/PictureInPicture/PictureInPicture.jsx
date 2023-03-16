@@ -15,6 +15,9 @@ const PictureInPicture = () => {
     const dispatch = useDispatch()
     const videoRef = useRef(null);
 
+
+
+
     useEffect(() => {
         if (pictureIsHidden) return
         const video = videoRef.current;
@@ -28,18 +31,15 @@ const PictureInPicture = () => {
         if (result) {
             video.currentTime = result.lastTime;
         }
-        video.play(); 
+        video.play();
+
         return () => {
             pauseVideo()
             hls.destroy()
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pictureIsHidden]);
 
-
-
-    const handlePictureModeOff = () => {
-        dispatch(pictureModeOff())
-    }
 
     const checkVideoList = () => {
         if (!videoArray.length) return false
@@ -47,10 +47,11 @@ const PictureInPicture = () => {
         return result ?? false
     }
 
-    const closePopup = () => {
+    const handleClosePopup = () => {
         const video = videoRef.current;
         dispatch(saveVideoTime(video.currentTime))
         dispatch(clearCurrentVideo())
+        dispatch(pictureModeOff())
     }
 
     const pauseVideo = () => {
@@ -63,7 +64,7 @@ const PictureInPicture = () => {
     return (
         !pictureIsHidden &&
         <PictureRightBlock >
-            <button onClick={handlePictureModeOff}>Close</button>
+            <button onClick={handleClosePopup}>Close</button>
             <video width="100%" ref={videoRef} controls onClick={((e) => e.stopPropagation())}></video>
         </PictureRightBlock>
     )

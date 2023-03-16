@@ -23,6 +23,7 @@ const PopupVideo = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
@@ -42,6 +43,7 @@ const PopupVideo = () => {
             pauseVideo()
             hls.destroy()
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentVideo]);
 
     const handlePictureMode = (e) => {

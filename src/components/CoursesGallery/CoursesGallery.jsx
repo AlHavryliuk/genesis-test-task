@@ -22,7 +22,8 @@ const CoursesGallery = () => {
     dispatch(getToken())
       .unwrap()
       .then(() => dispatch(getCourses()));
-  }, [dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
