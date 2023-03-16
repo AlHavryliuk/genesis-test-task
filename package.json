@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "lint:js": "eslint src/**/*.{js,jsx}"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "https://api.wisey.app",
   "eslintConfig": {
     "extends": [
       "react-app",
