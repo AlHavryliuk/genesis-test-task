@@ -12,7 +12,7 @@ $privateHost.interceptors.request.use(config => {
 
 export const fetchAuth = async () => {
   const { data } = await axios.get(
-    '/api/v1/auth/anonymous?platform=subscriptions'
+    '?http://api.wisey.app/api/v1/auth/anonymous?platform=subscriptions'
   );
   return data;
 };
@@ -20,11 +20,15 @@ export const fetchAuth = async () => {
 export const fetchCourses = async () => {
   const {
     data: { courses },
-  } = await $privateHost.get('/api/v1/core/preview-courses');
+  } = await $privateHost.get(
+    '?http://api.wisey.app/api/v1/core/preview-courses'
+  );
   return courses;
 };
 
 export const fetchCoursesById = async id => {
-  const { data } = await $privateHost.get(`/api/v1/core/preview-courses/${id}`);
+  const { data } = await $privateHost.get(
+    `?http://api.wisey.app/api/v1/core/preview-courses/${id}`
+  );
   return data;
 };
