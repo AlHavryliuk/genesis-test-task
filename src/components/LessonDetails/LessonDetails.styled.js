@@ -9,6 +9,7 @@ export const LessonItem = styled.div`
   align-items: center;
   position: relative;
 
+
   & .blocked::after {
     content: 'Lesson is blocked';
     text-align: center;

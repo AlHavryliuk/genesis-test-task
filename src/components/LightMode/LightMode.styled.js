@@ -14,4 +14,10 @@ export const LightmodeWrapper = styled.div`
   justify-content: center;
   gap: 15px;
   color: ${({ theme }) => theme.lightModeColor};
+
+  & h2 {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 `;

@@ -10,6 +10,10 @@ export const GoBackCustom = styled.button`
   cursor: pointer;
   transition: all 0.3s;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &:hover {
     background-color: black;
     color: white;

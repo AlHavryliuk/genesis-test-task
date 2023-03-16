@@ -11,24 +11,39 @@ $privateHost.interceptors.request.use(config => {
 });
 
 export const fetchAuth = async () => {
-  const { data } = await axios.get(
-    'https://api.wisey.app/api/v1/auth/anonymous?platform=subscriptions'
-  );
-  return data;
+  try {
+    const { data } = await axios.get(
+      'https://api.wisey.app/api/v1/auth/anonymous?platform=subscriptions'
+    );
+    return data;
+  } catch (error) {
+    console.log(error.response.status);
+    console.log(error.response.data);
+  }
 };
 
 export const fetchCourses = async () => {
-  const {
-    data: { courses },
-  } = await $privateHost.get(
-    'https://api.wisey.app/api/v1/core/preview-courses'
-  );
-  return courses;
+  try {
+    const {
+      data: { courses },
+    } = await $privateHost.get(
+      'https://api.wisey.app/api/v1/core/preview-courses'
+    );
+    return courses;
+  } catch (error) {
+    console.log(error.response.status);
+    console.log(error.response.data);
+  }
 };
 
 export const fetchCoursesById = async id => {
-  const { data } = await $privateHost.get(
-    `https://api.wisey.app/api/v1/core/preview-courses/${id}`
-  );
-  return data;
+  try {
+    const { data } = await $privateHost.get(
+      `https://api.wisey.app/api/v1/core/preview-courses/${id}`
+    );
+    return data;
+  } catch (error) {
+    console.log(error.response.status);
+    console.log(error.response.data);
+  }
 };
