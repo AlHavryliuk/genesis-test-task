@@ -9,6 +9,9 @@ export const select = {
   details: state => state.details.details,
   detailsIsLoading: state => state.details.isLoading,
   currentVideo: state => state.video.currentVideo,
+  videoArray: state => state.video.videoArray,
+  openVideoPopup: state => state.video.openPopup,
+  pictureModeisHidden: state => state.pictureMode.isHidden,
 };
 
 export const reselect = {

@@ -1,10 +1,10 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useSelector } from "react-redux";
-import { select } from "store/selectors/selectors";
 import LessonDetails from "components/LessonDetails/LessonDetails";
+import { useSelector } from "react-redux";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { select } from "store/selectors/selectors";
+import { StyledSlider } from "./SimpleSlider.styled";
 
 export const SimpleSlider = () => {
     const details = useSelector(select.details)
@@ -18,10 +18,10 @@ export const SimpleSlider = () => {
         slidesToScroll: 1
     };
     return (
-        <div>
+        <StyledSlider>
             <Slider {...settings}>
                 {details && details.lessons.map((lesson, index) => <LessonDetails key={lesson.id} index={index} lesson={lesson} />)}
             </Slider>
-        </div>
+        </StyledSlider>
     );
 }

@@ -10,6 +10,16 @@ export const PopupVideoMain = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  & h2 {
+    color: ${({ theme }) => theme.popupVideoColor};
+  }
+
+  & button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: ${({ theme }) => theme.popupVideoColor};
+  }
 `;
 
 export const PopupVideoBody = styled.div`

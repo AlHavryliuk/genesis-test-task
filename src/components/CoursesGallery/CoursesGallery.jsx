@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { CustomCoursesGallery } from './CoursesGallery.styled';
+import Loader from 'components/Loader/Loader';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCourses } from 'store/coursesReducer/coursesOperations';
 import { getToken } from 'store/authReducer/authOperation';
+import { getCourses } from 'store/coursesReducer/coursesOperations';
 import { reselect, select } from 'store/selectors/selectors';
 import CoursesCard from './../CoursesCard/CoursesCard';
-import Loader from 'components/Loader/Loader';
+import { CustomCoursesGallery } from './CoursesGallery.styled';
 
 const CoursesGallery = () => {
   const dispatch = useDispatch();
@@ -25,8 +25,6 @@ const CoursesGallery = () => {
         <CustomCoursesGallery>
           {courses
             .map(course => {
-              console.log(course);
-              console.log(courses);
               return (
                 <CoursesCard key={course.id} course={course} />
               )

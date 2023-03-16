@@ -12,6 +12,9 @@ export const lightThemeVars = {
   paginationButtonDisabledColor: 'gray',
   paginationButtonTextHoverColor: 'white',
   detailsColorText: 'black',
+  goBackColor: 'black',
+  popupVideoColor: 'white',
+  picInPicbackground: 'white',
 };
 
 export const darkThemeVars = {
@@ -28,4 +31,7 @@ export const darkThemeVars = {
   lightModeBackground: 'gold',
   lightModeColor: 'gold',
   detailsColorText: 'white',
+  goBackColor: 'white',
+  popupVideoColor: 'white',
+  picInPicbackground: '#2C3333',
 };

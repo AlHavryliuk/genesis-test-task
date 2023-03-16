@@ -1,5 +1,4 @@
-import React from 'react'
-import { GoBackCustom } from './GoBackButton.styled'
+import { GoBackCustom } from './GoBackButton.styled';
 
 const GoBackButton = () => {
     // Simple Go Back without 'location object'

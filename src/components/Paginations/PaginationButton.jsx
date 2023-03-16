@@ -1,9 +1,8 @@
-import React from 'react'
-import { CusomButton, PaginationBlock } from './PaginationButton.styled'
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { decrementPage, incrementPage, setMaxPage } from 'store/pageReducer/pageSlice';
 import { select } from 'store/selectors/selectors';
-import { useEffect } from 'react';
+import { CusomButton, PaginationBlock } from './PaginationButton.styled';
 
 const PaginationButton = () => {
 

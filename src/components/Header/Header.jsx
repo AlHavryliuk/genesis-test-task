@@ -4,7 +4,6 @@ import HeaderSection from 'components/Custom/HeaderSection/HeaderSection'
 import { CustomTitle } from 'components/Custom/HeaderSection/HeaderSection.styled'
 import LightMode from 'components/LightMode/LightMode'
 
-import React from 'react'
 
 const Header = () => {
   return (

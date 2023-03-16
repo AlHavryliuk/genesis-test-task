@@ -1,4 +1,3 @@
-import React from 'react';
 import { CustomHeader } from './HeaderSection.styled';
 
 const HeaderSection = ({ children }) => {

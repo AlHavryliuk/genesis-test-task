@@ -1,5 +1,4 @@
 import { CustomNavLink } from 'components/Custom/CustomNavLink/CustomNavLink.styled';
-import React from 'react';
 import { CourseTitle, CustomCourseCard } from './CourseesCard.styled';
 
 const CoursesCard = ({
@@ -11,11 +10,9 @@ const CoursesCard = ({
       <CustomCourseCard>
         <ul className="top-slider">
           <li>
-
             {skills && <span>
               <b>Skills:</b> {skills.map(skill => skill).join(', ')}
             </span>}
-
           </li>
           <li>
             <span>

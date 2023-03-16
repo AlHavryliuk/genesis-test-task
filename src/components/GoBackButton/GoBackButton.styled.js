@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const GoBackCustom = styled.button`
   border: 1px solid;
   background-color: transparent;
-  color: white;
+  color: ${({ theme }) => theme.goBackColor};
   padding: 20px 30px;
   border-radius: 5px;
   margin: 20px 0;

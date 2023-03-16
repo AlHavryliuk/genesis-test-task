@@ -1,4 +1,3 @@
-import React from 'react'
 import { RingLoader } from 'react-spinners'
 import { LoaderBody } from './Loader.styled'
 

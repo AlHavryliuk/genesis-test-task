@@ -1,9 +1,8 @@
-import React from 'react';
-import { LightButton, LightmodeWrapper } from './LightMode.styled';
-import icon from '../../images/icon-spread.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleDarkMode } from 'store/themeReducer/themeSlice';
+import icon from '../../images/icon-spread.svg';
 import { select } from './../../store/selectors/selectors';
+import { LightButton, LightmodeWrapper } from './LightMode.styled';
 
 const sunIcon = `${icon}#icon-sun`;
 const moonIcon = `${icon}#icon-moon`;

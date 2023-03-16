@@ -1,12 +1,14 @@
-import { useSelector } from 'react-redux';
-import Header from './Header/Header';
+import DetailsPage from 'pages/Details/DetailsPage';
 import HomePage from 'pages/Home/HomePage';
-import { ThemeProvider } from 'styled-components';
+import { Toaster } from 'react-hot-toast';
+import { useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 import { select } from 'store/selectors/selectors';
+import { ThemeProvider } from 'styled-components';
 import { darkThemeVars, lightThemeVars } from 'utils/variables/themeVariables';
 import { GlobalStyle } from './Custom/GlobalStyle/GlobalStyle';
-import { Route, Routes } from 'react-router-dom';
-import DetailsPage from 'pages/Details/DetailsPage';
+import Header from './Header/Header';
+import PictureInPicture from './PictureInPicture/PictureInPicture';
 
 export const App = () => {
 
@@ -15,13 +17,14 @@ export const App = () => {
   return (
     <ThemeProvider theme={darkmode ? darkThemeVars : lightThemeVars}>
       <GlobalStyle />
+      <Toaster />
       <Header />
 
       <Routes >
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
-    
       </Routes>
+      <PictureInPicture />
     </ThemeProvider>
   );
 };

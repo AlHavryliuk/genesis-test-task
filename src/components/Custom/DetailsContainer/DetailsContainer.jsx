@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledDetails } from './DetailsContainer.styled'
 
 const DetailsContainer = ({ children }) => {

@@ -7,7 +7,7 @@ export const getDetails = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const course = await fetchCoursesById(id);
-      console.log(course);
+      // console.log(course);
       return course;
     } catch (error) {
       return rejectWithValue(error.message);
