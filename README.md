@@ -2,7 +2,7 @@
 
 Проект розроблений спеціально для Genesis Front End School у якості тестового кейсу
 
-## Используемые технологии
+## Використані технології
 
 - React
 - Redux
@@ -10,7 +10,7 @@
 - react-hot-toast
 - и др.
 
-## Установка
+## Встановлення
 
 - Встановіть [Node.js](https://nodejs.org/en/download/)
 - Клонуйте репозиторій: `git clone https://github.com/your-username/your-repo`
