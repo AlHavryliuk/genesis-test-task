@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { select } from 'store/selectors/selectors';
 import { getDetails } from './../../store/detailsReducer/detailsOperations';
-import { CustomStyled } from './Details.styled';
+import { CustomStyled, DetailsSubTitle } from './Details.styled';
 
 
 const Details = () => {
@@ -52,7 +52,7 @@ const Details = () => {
             {details && <>
                 <h1>{details.title}</h1>
                 <SimpleSlider />
-                <h2>Description: </h2>
+                <DetailsSubTitle>Description: </DetailsSubTitle>
                 <p>{details.description}</p>
             </>
             }

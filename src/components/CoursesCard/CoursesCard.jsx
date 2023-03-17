@@ -33,7 +33,7 @@ const CoursesCard = ({
 
 CoursesCard.propTypes = {
   course: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     previewImageLink: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     lessonsCount: PropTypes.number.isRequired,

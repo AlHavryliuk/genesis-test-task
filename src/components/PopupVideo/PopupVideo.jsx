@@ -44,7 +44,7 @@ const PopupVideo = () => {
             hls.destroy()
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentVideo]);
+    }, [openVideoPopup]);
 
 
     // On 'Picture in Picture  & Close Popup'

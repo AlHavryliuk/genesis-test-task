@@ -30,6 +30,7 @@ const PictureInPicture = () => {
         video.play();
         return () => {
             pauseVideo()
+            
             hls.destroy()
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
