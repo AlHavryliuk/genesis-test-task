@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/genesis-test-task/static/css/main.d2697113.css",
-    "main.js": "/genesis-test-task/static/js/main.133c8dbd.js",
+    "main.js": "/genesis-test-task/static/js/main.57843da9.js",
     "static/js/930.aab32e0f.chunk.js": "/genesis-test-task/static/js/930.aab32e0f.chunk.js",
     "static/media/icon-spread.svg": "/genesis-test-task/static/media/icon-spread.a82105b01635453c83111dafaad02c3b.svg",
     "static/media/slick.svg": "/genesis-test-task/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/genesis-test-task/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/genesis-test-task/index.html",
     "main.d2697113.css.map": "/genesis-test-task/static/css/main.d2697113.css.map",
-    "main.133c8dbd.js.map": "/genesis-test-task/static/js/main.133c8dbd.js.map",
+    "main.57843da9.js.map": "/genesis-test-task/static/js/main.57843da9.js.map",
     "930.aab32e0f.chunk.js.map": "/genesis-test-task/static/js/930.aab32e0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2697113.css",
-    "static/js/main.133c8dbd.js"
+    "static/js/main.57843da9.js"
   ]
 }
