@@ -16,15 +16,11 @@ const PictureInPicture = () => {
     const videoRef = useRef(null);
 
 
-
-
     useEffect(() => {
         if (pictureIsHidden) return
         const video = videoRef.current;
         const hls = new Hls();
-        const firstVideo = currentVideo;
-        if (!firstVideo) return
-        console.log(currentVideo);
+        if (!currentVideo) return
         hls.loadSource(currentVideo);
         hls.attachMedia(video);
         const result = checkVideoList()
@@ -32,7 +28,6 @@ const PictureInPicture = () => {
             video.currentTime = result.lastTime;
         }
         video.play();
-
         return () => {
             pauseVideo()
             hls.destroy()

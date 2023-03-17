@@ -1,4 +1,5 @@
 import { CustomNavLink } from 'components/Custom/CustomNavLink/CustomNavLink.styled';
+import PropTypes from 'prop-types';
 import { CourseTitle, CustomCourseCard } from './CourseesCard.styled';
 
 const CoursesCard = ({
@@ -28,6 +29,19 @@ const CoursesCard = ({
       </CustomCourseCard>
     </CustomNavLink>
   );
+};
+
+CoursesCard.propTypes = {
+  course: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    previewImageLink: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    lessonsCount: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
+    meta: PropTypes.shape({
+      skills: PropTypes.arrayOf(PropTypes.string)
+    })
+  }).isRequired
 };
 
 export default CoursesCard;

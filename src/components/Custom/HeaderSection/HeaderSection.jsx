@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { CustomHeader } from './HeaderSection.styled';
 
 const HeaderSection = ({ children }) => {
@@ -6,6 +7,10 @@ const HeaderSection = ({ children }) => {
       {children}
     </CustomHeader>
   );
+};
+
+HeaderSection.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default HeaderSection;

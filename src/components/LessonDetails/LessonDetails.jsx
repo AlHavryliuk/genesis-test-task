@@ -8,13 +8,18 @@ const LessonDetails = ({ index, lesson }) => {
     const { title, status } = lesson
     const dispatch = useDispatch();
     const videoArray = useSelector(select.videoArray)
+    const pictureMode = useSelector(select.pictureModeisHidden)
 
     const handleSetVideo = (link) => {
+        if (!pictureMode) {
+            dispatch(pictureModeOff())
+        }
         dispatch(setCurrentVideo(link))
-        dispatch(pictureModeOff())
         dispatch(openVideoPopup())
         addVideoId(link)
     }
+
+    // Add new video to LS
 
     const addVideoId = (link) => {
         if (!videoArray.length) {

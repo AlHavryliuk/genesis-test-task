@@ -46,6 +46,9 @@ const PopupVideo = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentVideo]);
 
+
+    // On 'Picture in Picture  & Close Popup'
+
     const handlePictureMode = (e) => {
         e.stopPropagation()
         const video = videoRef.current;
@@ -53,6 +56,8 @@ const PopupVideo = () => {
         dispatch(closeVideoPopup())
         dispatch(pictureModeOn())
     }
+
+    // Speed controller
 
     const handleKeyDown = (e) => {
         const video = videoRef.current;
@@ -69,6 +74,7 @@ const PopupVideo = () => {
             closePopup()
         }
     };
+
 
     const checkVideoList = () => {
         if (!videoArray.length) return false

@@ -21,7 +21,6 @@ const LightMode = () => {
                 <svg width="100%" height="100%">
                     <use href={darkMode ? moonIcon : sunIcon}></use>
                 </svg>
-
             </LightButton>
             <h2>{darkMode ? `Night` : `Light`} Mode</h2>
         </LightmodeWrapper>

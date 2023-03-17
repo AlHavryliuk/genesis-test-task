@@ -19,6 +19,8 @@ const Details = () => {
     const currentVideo = useSelector(select.currentVideo)
     const videoRef = useRef(null);
 
+    // Loading the first video from Lessons
+
     useEffect(() => {
         const video = videoRef.current;
         const hls = new Hls();
@@ -31,6 +33,8 @@ const Details = () => {
             hls.destroy()
         })
     }, [details]);
+
+    // Paused video in time when user click video-lesson
 
     useEffect(() => {
         const video = videoRef.current;

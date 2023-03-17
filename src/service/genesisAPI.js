@@ -2,6 +2,8 @@ import axios from 'axios';
 
 const $privateHost = axios.create({});
 
+// ========= Set token =============
+
 $privateHost.interceptors.request.use(config => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -10,6 +12,8 @@ $privateHost.interceptors.request.use(config => {
   return config;
 });
 
+// ========= Get token =============
+
 export const fetchAuth = async () => {
   try {
     const { data } = await axios.get(
@@ -17,10 +21,11 @@ export const fetchAuth = async () => {
     );
     return data;
   } catch (error) {
-    console.log(error.response.status);
     console.log(error.response.data);
   }
 };
+
+// ========= Get courses list =============
 
 export const fetchCourses = async () => {
   try {
@@ -31,10 +36,11 @@ export const fetchCourses = async () => {
     );
     return courses;
   } catch (error) {
-    console.log(error.response.status);
     console.log(error.response.data);
   }
 };
+
+// ========= Get more details about course =============
 
 export const fetchCoursesById = async id => {
   try {
@@ -43,7 +49,6 @@ export const fetchCoursesById = async id => {
     );
     return data;
   } catch (error) {
-    console.log(error.response.status);
     console.log(error.response.data);
   }
 };

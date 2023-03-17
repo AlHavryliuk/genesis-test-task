@@ -5,20 +5,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getToken } from 'store/authReducer/authOperation';
 import { getCourses } from 'store/coursesReducer/coursesOperations';
 import { reselect, select } from 'store/selectors/selectors';
-// import CoursesCard from './../CoursesCard/CoursesCard';
 import { CustomCoursesGallery } from './CoursesGallery.styled';
-
-
 
 const CoursesGallery = () => {
   const dispatch = useDispatch();
   const courses = useSelector(reselect.coursePagination);
-  const isLoading = useSelector(select.courseIsLoading)
-  const LazyCoursesCard = lazy(() =>
-    import('./../CoursesCard/CoursesCard'))
+  const isLoading = useSelector(select.courseIsLoading);
+  const LazyCoursesCard = lazy(() => import('./../CoursesCard/CoursesCard'));
 
   useEffect(() => {
-    if (courses) return
+    if (courses) return;
     dispatch(getToken())
       .unwrap()
       .then(() => dispatch(getCourses()));
@@ -26,22 +22,17 @@ const CoursesGallery = () => {
   }, []);
 
   return (
-    <>
-      {isLoading && <Loader />}
-      {courses && (
+    <Suspense fallback={<Loader />}>
+      {isLoading ? (
+        <Loader />
+      ) : courses ? (
         <CustomCoursesGallery>
-          <Suspense fallback={<Loader />}>
-            {courses
-              .map(course => {
-                return (
-                  <LazyCoursesCard key={course.id} course={course} />
-                )
-              })
-            }
-          </Suspense>
+          {courses.map((course) => (
+            <LazyCoursesCard key={course.id} course={course} />
+          ))}
         </CustomCoursesGallery>
-      )}
-    </>
+      ) : null}
+    </Suspense>
   );
 };
 
